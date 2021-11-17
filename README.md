@@ -2,6 +2,9 @@
 Códigos sobre la optativa de Advanced Computing Systems Programming (ACSP), cursada en ESCOM, IPN. Por el profesor Victor Hugo García Ortega.
 
 Compilando módulos de kernel: kbuild
+
+*Nota: Todos los comandos son para **Linux***.
+
 ## Para generar los módulos (arhivos .ko):
 En el Makefile, debes poner el nombre del archivo .c (Que contiene el código del módulo del kernel)
 
@@ -28,3 +31,11 @@ Ejemplo:
 
 insmod file.ko
 
+## Cómandos para ver el módulo ya insertado:
+**lsmod**                     - Muestra todos los módulos activos
+
+**lsmod | grep name**         - Filtra en los módulos activos un nombre
+
+**dmesg**                     - Muestra el contenido de syslog
+
+**tail -f /var/log/syslog**   - Muestra las últimas 10 líneas del contenido de syslog
